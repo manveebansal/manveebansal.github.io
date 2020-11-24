@@ -1,0 +1,669 @@
+  /* ————————————————————————————————— main nav skeletal structure ——————————————————————————————— */
+
+  body {
+    width: 100%;
+    background-color: #fcf2ee;
+    margin: 0 auto;
+  }
+
+  .nav-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "nav-menu nav-menu nav-menu nav-menu"
+      "main-content main-content main-content main-content"
+      "main-content main-content main-content main-content";
+  }
+  
+  
+  .nav-menu { 
+    grid-area: nav-menu; 
+  }
+  
+  .main-content { 
+    grid-area: main-content; 
+  }
+  
+  
+/* ———————————————————————————————————————— menu content ———————————————————————————————————————— */
+
+/* header */
+header {
+  padding: 15px;
+  background-color: #FCF2EE;
+  border-bottom: #D2374F 1px solid;
+}
+
+/* logo styles */
+
+.intro-heading h1 {
+    color: #384143;
+    font-family: "Lobster Two", cursive;
+    font-size: 4em;
+  margin0left: 8%;
+  }
+
+h3 {
+  color: #D2374F;
+  padding-left: 38%;
+  font-size: 1.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* menu main */
+  ul { 
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background: #FCF2EE; 
+    border-bottom: #D2374F 5px;
+  }
+  
+/* menu buttons */
+  li {
+    display: flex;
+    justify-content: center;
+    font-family: "Playfair Display", serif;
+    padding: 10px 20px;
+    margin-right: 1%;
+  }
+
+/* menu buttons on hover */
+  li:hover {
+    background: #D2374F);
+  }
+
+/* menu buttons on select */
+  li:hover a {
+    color: #D2374F;
+  }
+
+/* top menu */
+  .top {
+    text-decoration: none;
+    color: #384143;
+  }
+  
+/* slicknav menu */
+  .slicknav_menu {
+    display: none;
+  }
+
+/* slicknav menu breakpoints */
+  @media screen and (max-width: 780px) {
+    /* #menu is the original menu */
+    #menu {
+      display: none;
+    }
+
+/* slicknav menu background, fonts, and styles */
+    .slicknav_menu {
+      display: block;
+      background-color: #FCF2EE !important;
+    }
+
+    .slicknav_menu,
+    .slicknav_menutxt {
+      font-family: "Playfair Display";
+    }
+  
+    .slicknav_nav .slicknav_row,
+    .slicknav_nav a {
+      display: block;
+      max-width: 100px;
+    }
+  
+    .slicknav_nav ul {
+      margin: 0 0 0 20px;
+      text-align: center;
+      justify-content: flex-end;
+    }
+  
+  /* slicknav menu ul, li, and hover */
+    ul {
+      justify-content: flex-end;
+      background: #FCF2EE;
+    }
+  
+    li {
+      padding: 2px 3px;
+      background: #FCF2EE;
+      margin-right: 0;
+    }
+  
+    li:hover a {
+      background: #B1AA95;
+    }
+  
+    a {
+      font-size: 1em;
+      display: block;
+    }
+  
+    a:hover {
+      background: #B1AA95 !important;
+    }
+  
+    .top {
+      color: #384143 !important;
+    }
+  }
+
+/* ———————————————————————————————————————— main content ———————————————————————————————————————— */
+  
+ /* background image */
+  .wrapper:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("https://images.pexels.com/photos/3944308/pexels-photo-3944308.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")
+      center center;
+    opacity: 0.3;
+  }
+
+/* big title */
+  .explore-all p {
+    color: #384143;
+    font-family: "Lobster Two", cursive;
+    font-size: 4em;
+    margin-left: 10%;
+    margin-top: 40%;
+  }
+
+.intro-heading h1 {
+    color: #384143;
+    font-family: "Lobster Two", cursive;
+    font-size: 4em;
+  margin-left: 9%;
+  }
+
+
+/* big title spacing*/
+  .intro-heading {
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+
+/* sub header*/
+p{
+    display: flex;
+    color:  #384143;
+    font-family: 'Playfair Display', serif;
+  }
+
+/* button styles */
+  .learn-more{
+    margin-top: 30px;
+    padding: 12px;
+    font-size: 16px;
+    width: 120px;
+    box-shadow: 5px 5px 5px #d2374f;
+    justify-content: center;
+    font-family: 'Lobster Two', cursive;
+    background-color: #d2374f;
+  }
+
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .learn-more:hover{
+    background-color: grey;
+    box-shadow: 5px 5px 5px grey;
+  }
+
+/* MILES SECTION */
+
+.our-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  background-color: #fcf2ee;
+  margin-top: 80px;
+  }
+
+.img-container1{
+  display: flex;
+  border-radius: 10%;
+  margin-left: 8%;
+}
+
+.img-container1 img{
+  width: 95%;
+  height: 88%;
+}
+
+.img-container2{
+   display: flex;
+   object-fit: cover;
+  border-radius: 10%;
+}
+
+.img-container2 img{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 20%;
+  margin-top: 8%;
+}
+
+.menu-container1 h2{
+  margin-top: 10%;
+  display: flex;
+  margin-left: 10%;
+  font-family: 'Playfair Display', serif;
+  color: #394244;
+  }
+
+.menu-container2 h2{
+  margin-top: 15%;
+  display: flex;
+  margin-left: 10%;
+  font-family: 'Playfair Display', serif;
+  color: #394244;
+  } 
+
+p{
+  display: flex;
+  margin-left: 10%;
+  font-family: 'Playfair Display', serif;
+  margin-right: 10%;
+  color: #394244;
+}
+
+img{
+  border-radius: 10px;
+}
+
+.learn-more{
+  margin-top: 30px;
+  padding: 12px;
+  font-size: 16px;
+  width: 120px;
+  box-shadow: 5px 5px 5px #d2374f;
+  justify-content: center;
+  font-family: 'Lobster Two', cursive;
+  background-color: #d2374f;
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
+
+.learn-more:hover{
+  background-color: grey;
+  box-shadow: 5px 5px 5px grey;
+}
+
+/* LINDSAY SECTION */
+
+@media (min-width: 960px) {.footer-container {
+  margin-top: 8%;
+  padding: 3%;
+  background-color: #fcf2ee;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-row-gap: 1%;
+  grid-template-areas:
+    "Explore-Other-Foods Explore-Other-Foods Explore-Other-Foods Explore-Other-Foods"
+    "pic1 pic2 pic3 pic4"
+    "form form form form";
+}
+
+.Explore-Other-Foods { 
+  grid-area: Explore-Other-Foods;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 3%;
+  margin-top: 0 auto;
+}
+
+.pic1 { 
+  grid-area: pic1; 
+}
+
+.pic2 { grid-area: pic2; }
+
+.pic3 { grid-area: pic3; }
+
+.pic4 { grid-area: pic4; }
+
+.form { 
+  grid-area: form;
+  width: 85%;
+  padding: 5%;
+}
+
+.cropped1 {
+    width: 350px; /* width of container */
+    height: 300px; /* height of container */
+    object-fit: cover;
+  border-radius: 10%;
+  opacity: 0.5;
+    color: black;
+  
+  /*setting transition for transform actions*/
+transition: opacity 500ms ease-in-out;
+transition: box-shadow 500ms ease-in-out;
+
+  }
+
+.cropped1:hover {
+    opacity: 1;
+    box-shadow: 5px 5px 5px #444444;
+}
+
+h9 {
+  font-family: "Playfair Display", serif;
+  font-size: 4vw;
+  color: #394244;
+}
+
+h8 {
+  font-family: "Lobster Two", cursive;
+  font-size: 5vw;
+  padding-left: 6%;
+  color: #394244;
+}
+
+.form-center {
+  box-shadow: 10px 10px 10px 10px #888888;
+  width: 100%;
+  padding: 4%;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5vw;
+  } 
+
+.input-group-text {
+  padding: 1%;
+}
+
+.form-header {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 3%;
+  margin-top: 0 auto;
+}
+
+.button{
+    margin-top: 3%;
+    padding: 1%;
+    font-size: 1.5vw;
+    width: 15%;
+    box-shadow: 5px 5px 5px #d2374f;
+    justify-content: center;
+    font-family: 'Lobster Two', cursive;
+  color: white;
+    background-color: #d2374f;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .button:hover{
+    background-color: grey;
+    box-shadow: 5px 5px 5px grey;
+  }}
+
+ @media screen and (max-width: 480px) 
+  {
+    .explore-container{
+    display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+   
+    "Explore-Other-Foods"
+    "pic1"
+    "pic2"
+    "pic3"
+    "pic4"
+    "form"
+    ;}
+    .Explore-Other-Foods {
+      grid-area: Explore-Other-Foods;
+    }
+    .pic1 {grid-area: pic1;}
+   
+   }
+.pic2{grid-area: pic2;}
+.pic3{grid-area: pic3;}
+.pic4{grid-area:pic4;}
+.form{grid-area:form; 
+width: 85%;
+  padding: 5%;
+}
+
+.cropped1 {
+    width: 350px; /* width of container */
+    height: 300px; /* height of container */
+    object-fit: cover;
+  border-radius: 10%;
+  opacity: 0.5;
+    color: black;
+  
+  /*setting transition for transform actions*/
+transition: opacity 500ms ease-in-out;
+transition: box-shadow 500ms ease-in-out;
+
+  }
+
+.cropped1:hover {
+    opacity: 1;
+    box-shadow: 5px 5px 5px #444444;
+}
+
+h9 {
+  font-family: "Playfair Display", serif;
+  font-size: 4vw;
+  color: #394244;
+}
+
+h8 {
+  font-family: "Lobster Two", cursive;
+  font-size: 5vw;
+  padding-left: 6%;
+  color: #394244;
+}
+
+.form-center {
+  box-shadow: 10px 10px 10px 10px #888888;
+  width: 100%;
+  padding: 4%;
+  text-align: center;
+  font-family: "Playfair Display", serif;
+  font-size: 1.5vw;
+  } 
+
+.input-group-text {
+  padding: 1%;
+}
+
+.form-header {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-bottom: 3%;
+  margin-top: 0 auto;
+}
+
+.button{
+    margin-top: 3%;
+    padding: 1%;
+    font-size: 1.5vw;
+    width: 15%;
+    box-shadow: 5px 5px 5px #d2374f;
+    justify-content: center;
+    font-family: 'Lobster Two', cursive;
+  color: white;
+    background-color: #d2374f;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .button:hover{
+    background-color: grey;
+    box-shadow: 5px 5px 5px grey;
+  }}
+}
+
+/* MANVEE SECTION */
+
+
+.card1 img, .card2 img, .card3 img, .card4 img, .card5 img, .card6 img, .card7 img, .card8 img {
+  width: 200px; /* width of container */
+    height: 200px; /* height of container */
+    object-fit: cover;
+  border-radius: 10%;
+}
+
+.pizza-header {
+  font-family: "Lobster Two", cursive;
+  font-size: 2.5vw;
+  color: #394244;
+}
+
+.pizza-price {
+  font-family: "Playfair Display", serif;
+  font-size: 2vw;
+  color: #394244;
+}
+
+@media (min-width: 960px) {.explore-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "you-may-also-like you-may-also-like you-may-also-like you-may-also-like"
+    "card1 card2 card3 card4"
+    "card5 card6 card7 card8";
+}
+
+.you-may-also-like { 
+  grid-area: you-may-also-like;
+  display: flex;
+  align-content: center;
+  color: #384143;
+    font-family: "Lobster Two", cursive;
+  font-size: 35px;
+  justify-content:center;
+}
+
+.card1 { grid-area: card1; }
+
+.card2 { grid-area: card2; }
+
+.card3 { grid-area: card3; }
+
+.card4 { grid-area: card4; }
+
+.card5 { grid-area: card5; }
+
+.card6 { grid-area: card6; }
+
+.card7 { grid-area: card7; }
+
+.card8 { grid-area: card8; }
+
+.card1 img, .card2 img, .card3 img, .card4 img, .card5 img, .card6 img, .card7 img, .card8 img {
+  width: 200px; /* width of container */
+    height: 200px; /* height of container */
+    object-fit: cover;
+  border-radius: 10%;
+}
+
+.card1:hover img{
+  opacity:0.5;
+  transition: .5s ease;
+}
+
+
+.card2:hover img{
+  opacity:0.5;
+   transition: .5s ease;
+}
+
+.card3:hover img{
+  opacity:0.5;
+   transition: .5s ease;
+}
+
+.card4:hover img{
+  opacity:0.5;
+   transition: .5s ease;
+}
+.card5:hover img{
+  opacity:0.5;
+   transition: .5s ease;
+}
+
+.card6:hover img{
+  opacity:0.5;
+   transition: .5s ease;
+}
+
+.card7:hover img{
+  opacity:0.5;
+   transition: .5s ease;
+}
+
+.card8:hover img{
+  opacity:0.5;
+   transition: .5s ease;
+  }}
+
+@media screen and (max-width: 480px) 
+  {
+    .explore-container{
+    display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+   
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8";}
+
+    
+
+.card1{grid-area: card1;}
+    .card2{grid-area: card2;}
+    .card3{grid-area: card3;}
+    .card4{grid-area:card4;}
+    .card5{grid-area:card5;}
+    .card6{grid-area:card6;}
+    .card7{grid-area:card7;}
+    .card8{grid-area:card8;}
+    
+ 
+}
+    
+
+
+
+
+
+  
+  
